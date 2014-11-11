@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.msa"
+    android:versionCode="1"
+    android:versionName="1.0" >
+	android:screenOrientation="sensorLandscape"
+
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        >
+        
+        <activity
+            android:name="com.example.PhysicsWorld.MainActivity"
+            android:clearTaskOnLaunch="true"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:screenOrientation="sensorLandscape" 
+            >
+            
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.PhysicsWorld.Simulator"
+            android:parentActivityName="com.example.PhysicsWorld.MainActivity"
+            android:screenOrientation="sensorLandscape" >
+        </activity>
+        <activity
+            android:name="com.example.PhysicsWorld.Settings"
+            android:parentActivityName="com.example.PhysicsWorld.MainActivity"
+            android:screenOrientation="sensorLandscape" >
+        </activity>
+        <activity
+            android:name="com.example.PhysicsWorld.Help"
+            android:parentActivityName="com.example.PhysicsWorld.MainActivity"
+            android:screenOrientation="sensorLandscape" 
+            android:label="@string/title_activity_help" >
+        </activity>
+        <activity
+            android:name="com.example.PhysicsWorld.GameSettings"
+            android:parentActivityName="com.example.PhysicsWorld.Settings"
+            android:screenOrientation="sensorLandscape" 
+            android:label="@string/title_activity_game_settings" >
+        </activity>
+        <activity
+            android:name="com.example.PhysicsWorld.Sound"
+            android:parentActivityName="com.example.PhysicsWorld.Settings"
+            android:screenOrientation="sensorLandscape" 
+            android:label="@string/title_activity_sound" >
+        </activity>
+    </application>
+
+</manifest>
